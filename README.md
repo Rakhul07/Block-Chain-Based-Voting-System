@@ -1,84 +1,113 @@
-# BlockChainVoting
+Blockchain Voting System
 
-A blockchain-based E-voting system, created as the final year project of Shri Bhagubhai Mafatlal Polytechnic. Teammates include me, Sayyam Gada and Charmee Mehta.
-> The application is MIT-Licensed.
+A blockchain-based electronic voting (E-Voting) system that ensures transparency, security, and immutability using Ethereum smart contracts.
 
-## Build Setup
-
-```bash
-# install dependencies
+Build & Run Setup
+# Install dependencies
 npm install
 
-# serve with hot reload at localhost:3000
+# Start the development server
 npm start
-```
 
-Create your own <b>.env</b> file and the file should contain:
-```bash
-EMAIL=YOUR_EMAIL_ID
-PASSWORD=YOUR_PASSWORD_FOR_EMAIL_ID
-```
-Install MetaMask extension (https://metamask.io/download.html) and make sure to have some Ether to test the application locally. Ether can be fetched from Rinkeby Faucet (https://faucet.rinkeby.io)
 
-#### Note:
-- Make sure to install Node.js v11.14.0 to make sure the app runs fine. Testing for other node versions is yet to be done.
-- MongoDB must be working in background on localhost:27017
+The application runs at:
 
-###### Please star the repo if it helped you in any way!
+http://localhost:3000
 
-## Tech Stack:
+Environment Configuration
 
-- Solidity/Web3 (for writing/connecting the Blockchain contract)
-- Next.js & Semantic UI React (front-end)
-- MongoDB/ExpressJS/Node.js (back-end)
-- IPFS (file storage for images)
+Create a .env file in the root directory with the following variables:
 
-## Screenshots of the app:
+EMAIL=your_email_id
+PASSWORD=your_email_password
 
-Homepage of the application:
 
-![](screenshots/homepage.PNG)
+These credentials are used to send notifications to candidates and voters.
 
-Company registers/logs in:
+Prerequisites
 
-![](screenshots/company_login.PNG)
+Node.js
 
-Company creates an election if not created:
+Required version: v11.14.0
 
-![](screenshots/create_election.PNG)
+Other versions are not tested and may cause issues.
 
-Dashboard on successful election creation:
+MongoDB
 
-![](screenshots/dashboard.PNG)
+Must be running locally at:
 
-List of candidates for the election (here, you can add candidates):
+mongodb://localhost:27017
 
-![](screenshots/candidate_list.PNG)
 
-Candidate has been notified on the mail:
+MetaMask Extension
 
-![](screenshots/candidate_registeration_mail.PNG)
+Install from: https://metamask.io/download.html
 
-List of voters for the election (here, you can add voters):
+Connect MetaMask to the Rinkeby Test Network.
 
-![](screenshots/voterlist.PNG)
+Obtain test Ether from: https://faucet.rinkeby.io
 
-Voters have been sent their secure usernames and passwords on the mail:
+Technology Stack
 
-![](screenshots/voter_registeration_mail.PNG)
+Blockchain: Solidity, Web3.js
 
-Voter login page:
+Frontend: Next.js, Semantic UI React
 
-![](screenshots/voter_login.PNG)
+Backend: Node.js, Express.js, MongoDB
 
-Successful voting scenario:
+File Storage: IPFS
 
-![](screenshots/successful_voting.PNG)
+Application Workflow
 
-Unsuccessful voting scenario:
+Company registers and logs in.
 
-![](screenshots/unsuccessful_voting.PNG)
+Company creates an election.
 
-Notification to each candidate and voter for the winner of candidates:
+Company adds candidates and voters.
 
-![](screenshots/winner_candidate_mail.PNG)
+Candidates and voters receive credentials via email.
+
+Voters log in and cast their vote using MetaMask.
+
+Smart contract records votes immutably.
+
+Winner is announced and notified by email.
+
+Screenshots
+Homepage
+
+Company Login
+
+Create Election
+
+Dashboard
+
+Candidate List
+
+Candidate Registration Email
+
+Voter List
+
+Voter Registration Email
+
+Voter Login
+
+Successful Voting
+
+Unsuccessful Voting
+
+Winner Notification Email
+
+Notes
+
+Ensure MetaMask is connected before voting.
+
+MongoDB must be running before starting the server.
+
+Use only test Ether (Rinkeby network).
+
+Do not use real credentials for production.
+
+License
+
+This project is for educational and research purposes only.
